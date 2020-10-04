@@ -1,0 +1,119 @@
+Questão 1 
+
+O nome é "tmp_name".
+
+Questão 2
+
+A função include produz somente um warning e script continua a funcionar.
+
+A função require produz um erro grave e faz com que para o script.
+
+Questão 3
+
+Haverá alguns warnings dizendo que as constantes Primeiro, Segundo e Terceiro não foram definidas, porém $result receberá o valor array.
+
+Questão 4
+
+O resultado da função será 21, 21. Onde "2$b" define o valor de b com a string 2, não importa qual valor seja e "$b = &$a" cria uma referência para $a e a chama de $b. Fazendo com que as duas variáveis possuam o mesmo valor.
+
+Questão 5
+
+<?php
+$input = "1,2,3,4,5,6,7";
+$sum = array_sum( explode( ',', $input ) );
+echo $sum;
+
+Questão 6
+
+Join é usado para para combinar linhas de duas ou mais tabelas, baseado em colunas relacionadas entre elas.
+
+Join: Retorna coisas gravadas nas tabelas que combinam em valores nas duas tabelas.
+
+Left Join: Retorna todas as gravações da tabela esquerda e as gravações que combinam da tabela direita.
+
+Right Join: Retorna todas gravações da tabela direita, e as combinações de gravações da tabela esquerda.
+
+Full Join : Retorna todas as gravações quando tem combinações qualquer uma das tabelas.
+
+Questão 7
+
+São funções que processam um conjunto de valores contidos em uma única coluna de uma tabela e retorna um único valor como resultado.
+
+MAX = Analisa um conjunto de valores e retorna o maior entre eles.
+
+MIN = Analisa um conjunto de valores e retorna o menor entre eles.
+
+SUM = Realiza a soma dos valores em uma única coluna e retorna a soma.
+
+AVG = Calcula a média aritmética dos valores em uma única coluna.
+
+COUNT = Retorna o total de linhas selecionadas.
+
+GROUP BY = É divididos os registros que serão agregados em grupos de valores.
+
+Questão 8
+
+(SELECT id, name FROM table_1)
+EXISTS
+(SELECT id, name FROM table_2);
+
+Questão 9
+
+O resultado que irá retornar será Lisa Romero.
+
+Questão 10
+
+CREATE OR REPLACE FUNCTION atualiza_hora_coluna();
+RETURNS TRIGGER AS $$
+BEGIN
+	NEW.ultima_atualizacao = now();
+	RETURN NEW;
+END;
+$$ language 'plpgsql';
+
+CREATE TRIGGER atualiza_hora
+BEFORE UPDATE ON clientes
+FOR EACH ROW EXECUTE PROCEDURE atualiza_hora_coluna();
+
+Questão 11
+
+Será retornado os mesmos valor tanto para array 1 quanto para o array 2: length = 5 e last = j,o,n,e,s.
+
+A função reverse retorna uma referência de arr1, arr2 é uma referência de arr1 e quando algo é feito com arr2, arr1 também é afetada, já que arr1 e arr2 são referências ao mesmo objeto.
+
+Questão 12
+
+function variavel(){
+	var teste;
+	if (typeof teste === undefined){
+		document.write("Nao existe");
+	}else{
+		document.write("Existe");
+	}
+}
+
+Questão 13
+
+<ul id="lista-legal">
+<li>Pera</li>
+<li>Uva</li>
+<li>Maçã</li>
+</ul>
+
+$(function()){
+	$("#lista-legal").children().last();
+}
+
+$(function()){
+	$("#lista-legal").append("Salada mista");
+}
+
+Questão 14
+
+O resultado é 2020, pois é feita as dos inteiros e o valor entre aspas é concatenado pois possui o tipo string e não inteiro.
+
+Questão 15
+
+O atributo "==" compara se o valor de uma determinada variável é igual ao de outra variável.
+
+O atributo "===" compara se o valor e o tipo de uma variável são iguais ao de outra variável.
